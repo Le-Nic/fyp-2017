@@ -10,6 +10,7 @@ import pathlib
 import shutil
 import filecmp
 from tkinter import *
+from tkinter.filedialog import askopenfilenames
 
 from src import vulnProcess
 from src import iLoader	# for handling installed plugins
@@ -29,7 +30,7 @@ class Application(Frame):
 		self.filenames = ''
 
 	def open(self):
-		self.filenames = filedialog.askopenfilenames()
+		self.filenames = askopenfilenames()
 		self.textbox1.insert(0, self.filenames)
 
 
